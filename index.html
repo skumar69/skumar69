@@ -3,36 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>URL Login Form</title>
-    <script>
-        function navigateToUrl(event) {
-            event.preventDefault();
-            const url = document.getElementById('url').value;
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
-            
-            // Store the username and password in localStorage (for demo purposes only)
-            localStorage.setItem('username', username);
-            localStorage.setItem('password', password);
-
-            // Navigate to the URL
-            window.location.href = url;
+    <title>System Credentials</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
         }
-    </script>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <h1>Enter URL, Username, and Password</h1>
-    <form onsubmit="navigateToUrl(event)">
-        <label for="url">URL:</label>
-        <input type="url" id="url" name="url" required><br><br>
-        
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required><br><br>
-        
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required><br><br>
-        
-        <button type="submit">Go</button>
-    </form>
+    <h1>System Credentials</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>SYSTEM</th>
+                <th>USERNAME</th>
+                <th>PASSWORD</th>
+                <th>TYPE</th>
+                <th>URL</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Web credential</td>
+                <td>SAPA0268</td>
+                <td>NSs@123456</td>
+                <td></td>
+                <td><a href="https://newercqa.nscorp.com:9119/sap/bc/ui2/flp?saml2=disabled&sap-client=100&sap-language=EN" target="_blank">https://newercqa.nscorp.com:9119/sap/bc/ui2/flp?saml2=disabled&sap-client=100&sap-language=EN</a></td>
+            </tr>
+            <tr>
+                <td>QA credential</td>
+                <td>drwte</td>
+                <td>Ifeel@123</td>
+                <td>100</td>
+                <td><a href="https://newercqa.nscorp.com:9111/sap/bc/ui2/flp?sap-client=100&sap-language=EN#Shell-home" target="_blank">https://newercqa.nscorp.com:9111/sap/bc/ui2/flp?sap-client=100&sap-language=EN#Shell-home</a></td>
+            </tr>
+            <tr>
+                <td>Dev credential</td>
+                <td>testeot02</td>
+                <td>Password@6</td>
+                <td></td>
+                <td><a href="https://newercdevn1.nscorp.com:9113/sap/bc/ui5_ui5/ui2/ushell/shells/abap/Fiorilaunchpad.html" target="_blank">https://newercdevn1.nscorp.com:9113/sap/bc/ui5_ui5/ui2/ushell/shells/abap/Fiorilaunchpad.html</a></td>
+            </tr>
+            <tr>
+                <td>S4 QA</td>
+                <td>drwte</td>
+                <td>Ikiss@123</td>
+                <td>100</td>
+                <td><a href="#" target="_blank">*********</a></td>
+            </tr>
+            <tr>
+                <td>DS1</td>
+                <td>drwte</td>
+                <td>Ifeel@123</td>
+                <td>200</td>
+                <td><a href="#" target="_blank">India@123</a></td>
+            </tr>
+            <!-- Add more rows as necessary -->
+        </tbody>
+    </table>
 </body>
 </html>
