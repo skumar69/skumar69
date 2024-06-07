@@ -3,9 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World</title>
+    <title>URL Login Form</title>
+    <script>
+        function navigateToUrl(event) {
+            event.preventDefault();
+            const url = document.getElementById('url').value;
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            
+            // Store the username and password in localStorage (for demo purposes only)
+            localStorage.setItem('username', username);
+            localStorage.setItem('password', password);
+
+            // Navigate to the URL
+            window.location.href = url;
+        }
+    </script>
 </head>
 <body>
-    <h1>LOVE YOU DEAR !</h1>
+    <h1>Enter URL, Username, and Password</h1>
+    <form onsubmit="navigateToUrl(event)">
+        <label for="url">URL:</label>
+        <input type="url" id="url" name="url" required><br><br>
+        
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        
+        <button type="submit">Go</button>
+    </form>
 </body>
 </html>
