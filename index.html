@@ -3,85 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>System Credentials</title>
+    <title>Attractive Web Page</title>
+    <!-- AOS Library for animations -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <!-- Swiper CSS for carousel -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
         }
-        table {
+        header {
+            background: url('https://source.unsplash.com/random/1920x1080') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+            font-size: 2.5em;
+        }
+        section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .feature {
+            margin: 20px 0;
+        }
+        .swiper-container {
             width: 100%;
-            border-collapse: collapse;
+            height: 400px;
+            margin-top: 20px;
         }
-        th, td {
-            padding: 8px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-        tr:hover {
-            background-color: #f5f5f5;
-        }
-        a {
-            color: #007bff;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
         }
     </style>
 </head>
 <body>
-    <h1>System Credentials</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>SYSTEM</th>
-                <th>USERNAME</th>
-                <th>PASSWORD</th>
-                <th>TYPE</th>
-                <th>URL</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Web credential</td>
-                <td>SAPA0268</td>
-                <td>NSs@123456</td>
-                <td></td>
-                <td><a href="https://newercqa.nscorp.com:9119/sap/bc/ui2/flp?saml2=disabled&sap-client=100&sap-language=EN" target="_blank">https://newercqa.nscorp.com:9119/sap/bc/ui2/flp?saml2=disabled&sap-client=100&sap-language=EN</a></td>
-            </tr>
-            <tr>
-                <td>QA credential</td>
-                <td>drwte</td>
-                <td>Ifeel@123</td>
-                <td>100</td>
-                <td><a href="https://newercqa.nscorp.com:9111/sap/bc/ui2/flp?sap-client=100&sap-language=EN#Shell-home" target="_blank">https://newercqa.nscorp.com:9111/sap/bc/ui2/flp?sap-client=100&sap-language=EN#Shell-home</a></td>
-            </tr>
-            <tr>
-                <td>Dev credential</td>
-                <td>testeot02</td>
-                <td>Password@6</td>
-                <td></td>
-                <td><a href="https://newercdevn1.nscorp.com:9113/sap/bc/ui5_ui5/ui2/ushell/shells/abap/Fiorilaunchpad.html" target="_blank">https://newercdevn1.nscorp.com:9113/sap/bc/ui5_ui5/ui2/ushell/shells/abap/Fiorilaunchpad.html</a></td>
-            </tr>
-            <tr>
-                <td>S4 QA</td>
-                <td>drwte</td>
-                <td>Ikiss@123</td>
-                <td>100</td>
-                <td><a href="#" target="_blank">*********</a></td>
-            </tr>
-            <tr>
-                <td>DS1</td>
-                <td>drwte</td>
-                <td>Ifeel@123</td>
-                <td>200</td>
-                <td><a href="#" target="_blank">India@123</a></td>
-            </tr>
-            <!-- Add more rows as necessary -->
-        </tbody>
-    </table>
+    <header>
+        Welcome to My Attractive Web Page
+    </header>
+
+    <section>
+        <h2 data-aos="fade-up">Amazing Features</h2>
+        <div class="feature" data-aos="fade-left">
+            <img src="https://source.unsplash.com/random/800x600" alt="Feature 1" width="100%">
+            <p>Feature 1 Description</p>
+        </div>
+        <div class="feature" data-aos="fade-right">
+            <img src="https://source.unsplash.com/random/800x600" alt="Feature 2" width="100%">
+            <p>Feature 2 Description</p>
+        </div>
+        <div class="feature" data-aos="fade-up">
+            <img src="https://source.unsplash.com/random/800x600" alt="Feature 3" width="100%">
+            <p>Feature 3 Description</p>
+        </div>
+    </section>
+
+    <section>
+        <h2 data-aos="zoom-in">Image Carousel</h2>
+        <div class="swiper-container" data-aos="fade-up">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="https://source.unsplash.com/random/800x600" alt="Image 1"></div>
+                <div class="swiper-slide"><img src="https://source.unsplash.com/random/800x600?sig=1" alt="Image 2"></div>
+                <div class="swiper-slide"><img src="https://source.unsplash.com/random/800x600?sig=2" alt="Image 3"></div>
+                <div class="swiper-slide"><img src="https://source.unsplash.com/random/800x600?sig=3" alt="Image 4"></div>
+                <div class="swiper-slide"><img src="https://source.unsplash.com/random/800x600?sig=4" alt="Image 5"></div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Navigation -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        AOS.init();
+        const swiper = new Swiper('.swiper-container', {
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
 </body>
 </html>
